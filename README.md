@@ -1,3 +1,4 @@
+
 # Daily Levels
 
 ## Description
@@ -38,3 +39,5 @@ Link to your blog, twitter, etc!
 ## License
 
 My Spiffy App is MIT Licensed. See LICENSE for details.
+
+Monitor your happiness levels based on sleep and food.
