@@ -36,6 +36,8 @@ gem 'spring',        group: :development
 
 group :test, :development do
   gem "rspec-rails"
+  gem "guard-rspec"
+  gem "growl_notify"
   gem "capybara"
   gem "selenium-webdriver"
   gem "better_errors"

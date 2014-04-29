@@ -1,4 +1,4 @@
 class Status < ActiveRecord::Base
-	validates :dairy, :wheat, :meat, :coffee_cups, presence :true
+	validates :dairy, :wheat, :meat, :coffee_cups, :rating, presence: true
 
 end
