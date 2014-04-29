@@ -1,24 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/danielfenjves/development/projects/daily-levels/app/controllers/status_controller.rb": [
-        1,
-        null
-      ],
-      "/Users/danielfenjves/development/projects/daily-levels/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        null
-      ],
       "/Users/danielfenjves/development/projects/daily-levels/app/models/status.rb": [
         1,
         1,
-        null,
+        1,
         null
       ]
     },
-    "timestamp": 1398719681
+    "timestamp": 1398806079
   }
 }
