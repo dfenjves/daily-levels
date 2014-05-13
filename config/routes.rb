@@ -1,6 +1,6 @@
 Rails.application.routes.draw 
 
-get 'statuses' => 'statuses#index'
+root 'statuses#index'
 post 'statuses' => 'statuses#create'
 get 'statuses/new' => 'statuses#new', as: 'new_status' 
 get 'statuses/:id' => 'statuses#show', as: 'status'
