@@ -1,1 +1,12 @@
-"Hello World"
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Rating</th>
+	</tr>
+	<% @statuses.each do |status| %>
+	<tr>
+		<td><%= status.date %></td>
+		<td><%= status.rating %></td>
+	</tr>
+	<% end %>
+</table>
