@@ -17,8 +17,7 @@ class StatusesController < ApplicationController
 		if @status.save
 			redirect_to root_path
 		else
-			flash[:error] = "Please fill out the form completely"
-			redirect_to root_path
+			flash[:error] = "Please Fill Out The Form!"
 		end
 	end
 

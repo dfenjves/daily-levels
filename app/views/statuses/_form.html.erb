@@ -1,0 +1,33 @@
+<%= form_for @status do |f|%>
+
+	<p><%= f.label :date, "Date" %>
+		<%= f.date_field :date %></p>
+
+	<p><%= f.label :dairy, 'Dairy' %>
+		<%= f.check_box :dairy %></p>
+
+	<p><%= f.label :wheat, 'Wheat' %>
+		<%= f.check_box :dairy %></p>
+
+	<p>
+		<%= f.label :meat, 'Meat' %>
+		<%= f.check_box :meat %>
+	</p>
+
+	<p>
+		<%= f.label :coffee_cups, 'Cups of Coffee' %>
+		<%= f.number_field :coffee_cups %>
+	</p>
+
+	<p>
+		<%= f.label :rating, 'Today\'s Rating (1-10):' %>
+		<%= f.number_field :rating%>
+	</p>
+
+	<p>
+		<%= f.label :notes, "Additional Notes:" %>
+		<%= f.text_area :notes %>
+	</p>
+
+	<%= f.submit %>
+<% end %>
