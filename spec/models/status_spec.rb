@@ -11,21 +11,6 @@ describe Status do
 	end
 	
 	describe "fails if attributes are missing" do
-		
-		it "fails save if missing dairy" do
-			@status.dairy = nil
-			expect(@status.save).to be_false
-		end
-
-		it "fails save if missing wheat" do
-			@status.wheat = nil
-			expect(@status.save).to be_false
-		end
-
-		it "fails save if missing meat" do
-			@status.meat = nil
-			expect(@status.save).to be_false
-		end
 
 		it "fails save if missing coffee_cups" do
 			@status.coffee_cups = nil

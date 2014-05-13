@@ -9,5 +9,4 @@ patch 'statuses/:id' => 'statuses#update'
 put 'statuses/:id' => 'statuses#update'
 delete 'statuses/:id' => 'statuses#delete'
 
-
 end
