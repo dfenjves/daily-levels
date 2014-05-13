@@ -1,4 +1,14 @@
-Rails.application.routes.draw do
+Rails.application.routes.draw 
+
+get 'statuses' => 'statuses#index'
+post 'statuses' => 'statuses#create'
+get 'statuses/new' => 'statuses#new', as: 'new_status' 
+get 'statuses/:id' => 'statuses#show', as: 'status'
+get 'statuses/:id/edit' => 'statuses#edit' as: 'edit_status'
+patch 'statuses/:id' => 'statuses#update'
+put 'statuses/:id' => 'statuses#update'
+delete 'statuses/:id' => 'statuses#delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
