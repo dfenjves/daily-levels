@@ -17,7 +17,13 @@ class StatusesController < ApplicationController
 		if @status.save
 			redirect_to root_path
 		else
-			flash[:error] = "Please Fill Out The Form!"
+			if params[:coffee_cups] = ""
+				flash[:error] = "Please enter the number of coffee cups you consumed."
+				render "new"
+			elsif params[:rating] = ""
+				flash[:error] = "Please enter your rating for the day"
+				render "new"
+			end
 		end
 	end
 

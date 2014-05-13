@@ -1,1 +1,5 @@
+<% if flash[:error] %>
+    <div class="error"><%= flash[:notice] %></div>
+<% end %>
+
 <%= render 'form' %>
