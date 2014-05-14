@@ -1,14 +1,18 @@
 <table class="table">
-	<tr>
-		<th>Date</th>
-		<th>Rating</th>
-	</tr>
-	<% @statuses.each do |status| %>
-	<tr>
-		<td><%= status.date %></td>
-		<td><%= status.rating %></td>
-	</tr>
+	<thead>
+		<tr>
+			<th>Date</th>
+			<th>Rating</th>
+		</tr>
+	</thead>
+	<tbody>
+	<% @statuses.order(date: :desc).each do |status| %>
+		<tr class="clickableRow" href=<%= status_path(status) %>>
+			<td><%= status.date %></td>
+			<td><%= status.rating %></td>
+		</tr>
 	<% end %>
+	</tbody>
 </table>
 
 <a href=<%= new_status_path %>>Rate a day</a>
