@@ -16,12 +16,13 @@ class StatusesController < ApplicationController
 		@status = Status.new(status_params)
 		if @status.save
 			redirect_to root_path
+			flash[:success] = "Successfully created new daily status"
 		else
 			if params[:coffee_cups] = ""
-				flash[:error] = "Please enter the number of coffee cups you consumed."
+				flash[:error] = "Please add coffee consumption"
 				render "new"
 			elsif params[:rating] = ""
-				flash[:error] = "Please enter your rating for the day"
+				flash[:error] = "Please add a daily rating"
 				render "new"
 			end
 		end
