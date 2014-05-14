@@ -4,14 +4,18 @@
   <title>DailyLevels</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 </head>
 
 <body>
+	<div class="container">
+  <%= render partial: "shared/navbar" %>
 	<%= render partial: "shared/flash_messages", flash: flash %>
-
 	<%= yield %>
+	</div>
+	
 
 </body>
 </html>
