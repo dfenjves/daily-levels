@@ -19,11 +19,7 @@ class StatusesController < ApplicationController
 			redirect_to root_path
 			flash[:success] = "Successfully created new daily status"
 		else
-			if params[:coffee_cups] = ""
 				render "new"
-			elsif params[:rating] = ""
-				render "new"
-			end
 		end
 	end
 

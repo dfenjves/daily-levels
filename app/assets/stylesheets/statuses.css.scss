@@ -1,8 +1,33 @@
-// Place all the styles related to the statuses controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
 .food-icon {
 	width: 32px;
 	height: 32px;
+}
+
+.food-form {
+	width: 64px;
+	height: 64px;
+}
+
+.food-form-selected {
+	width: 64px;
+	height: 64px;
+	background: yellow;
+}
+
+.col-centered {
+    margin: 20px auto;
+    width: 50%;
+}
+
+.form-date {
+	width: 100%;
+	font-size: 30px;
+	text-align: center;
+}
+
+.form-coffee {
+	width: 60px;
+	font-size: 30px;
+	text-align: center;
 }
