@@ -10,7 +10,7 @@
 	</div>
 <% end %>
 	<p><%= f.label :date, "Date" %>
-		<%= f.date_field :date %></p>
+		<%= f.date_field :date, :value => Time.now.strftime("%Y-%m-%d")%></p>
 
 	<p><%= f.label :dairy, 'Dairy' %>
 		<%= f.check_box :dairy %></p>
