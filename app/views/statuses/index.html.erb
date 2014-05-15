@@ -33,7 +33,10 @@
 						<tr class="clickableRow" href=<%= status_path(status) %>>
 							<td><%= status.date %></td>
 							<td><%= status.rating %></td>
-							<td>icons</td>
+							<td><% icon_chooser(status).each do |icon| icon %>
+								<img class="food-icon" src="assets/<%= icon %>.png">
+								<% end %>
+							</td>
 						</tr>
 					<% end %>
 					</tbody>
