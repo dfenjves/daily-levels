@@ -19,10 +19,8 @@ class StatusesController < ApplicationController
 			flash[:success] = "Successfully created new daily status"
 		else
 			if params[:coffee_cups] = ""
-				flash[:error] = "Please add coffee consumption"
 				render "new"
 			elsif params[:rating] = ""
-				flash[:error] = "Please add a daily rating"
 				render "new"
 			end
 		end

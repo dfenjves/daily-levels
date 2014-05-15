@@ -1,5 +1,14 @@
 <%= form_for @status do |f|%>
 
+<% if !@status.errors.empty? %>
+	<div class="alert alert-danger">
+		<% @status.errors.full_messages.each do |message|%>
+		<ul>
+			<li><%= message %></li>
+		</ul>
+		<% end %>
+	</div>
+<% end %>
 	<p><%= f.label :date, "Date" %>
 		<%= f.date_field :date %></p>
 
