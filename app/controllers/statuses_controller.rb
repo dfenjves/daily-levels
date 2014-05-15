@@ -2,6 +2,7 @@ class StatusesController < ApplicationController
 
 	def index
 		@statuses = Status.all
+		@status = Status.new
 	end
 
 	def show

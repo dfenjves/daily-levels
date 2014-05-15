@@ -1,18 +1,47 @@
-<table class="table">
-	<thead>
-		<tr>
-			<th>Date</th>
-			<th>Rating</th>
-		</tr>
-	</thead>
-	<tbody>
-	<% @statuses.order(date: :desc).each do |status| %>
-		<tr class="clickableRow" href=<%= status_path(status) %>>
-			<td><%= status.date %></td>
-			<td><%= status.rating %></td>
-		</tr>
-	<% end %>
-	</tbody>
-</table>
+<div class="row">
+
+<!-- Panel containing table -->
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Recent Entries
+			</div>
+			<div class="panel-body">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Rating</th>
+							<th>Info</th>
+						</tr>
+					</thead>
+					<tbody>
+					<% @statuses.order(date: :desc).first(10).each do |status| %>
+						<tr class="clickableRow" href=<%= status_path(status) %>>
+							<td><%= status.date %></td>
+							<td><%= status.rating %></td>
+							<td>icons</td>
+						</tr>
+					<% end %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<!-- Panel containing form -->
+
+	<div class="col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Rate a day
+			</div>
+			<div class="panel-body">
+				<%= render 'form' %>
+			</div>
+		</div>
+	</div>
+
+</div>
 
 <a href=<%= new_status_path %>>Rate a day</a>
