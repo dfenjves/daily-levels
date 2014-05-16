@@ -3,12 +3,14 @@
     "coverage": {
       "/Users/danielfenjves/development/projects/daily-levels/app/models/user.rb": [
         1,
+        3,
+        null,
         1,
         1,
         1,
         null
       ]
     },
-    "timestamp": 1400251413
+    "timestamp": 1400252099
   }
 }
