@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-16T10:54:59-04:00">2014-05-16T10:54:59-04:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-05-16T11:16:07-04:00">2014-05-16T11:16:07-04:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.4
+         1.6
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>5</b> relevant lines. 
-    <span class="green"><b>5</b> lines covered</span> and
+    <b>7</b> relevant lines. 
+    <span class="green"><b>7</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#8f8cf6fa351f3d1130a87e4ed6d58ad7af4f4a90" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>10</td>
         <td>7</td>
-        <td>5</td>
-        <td>5</td>
+        <td>7</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.6</td>
       </tr>
       
     </tbody>
@@ -110,15 +110,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.4
+         1.6
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>1</b> files in total.
-    <b>5</b> relevant lines. 
-    <span class="green"><b>5</b> lines covered</span> and
+    <b>7</b> relevant lines. 
+    <span class="green"><b>7</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -138,11 +138,11 @@
       <tr>
         <td class="strong"><a href="#8f8cf6fa351f3d1130a87e4ed6d58ad7af4f4a90" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>10</td>
         <td>7</td>
-        <td>5</td>
-        <td>5</td>
+        <td>7</td>
         <td>0</td>
-        <td>1.4</td>
+        <td>1.6</td>
       </tr>
       
     </tbody>
@@ -276,8 +276,8 @@
     <h3>app/models/user.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -291,8 +291,8 @@
           <code class="ruby">class User &lt; ActiveRecord::Base</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="2">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="2">
+          <span class="hits">5</span>
           
           <code class="ruby">	before_save { self.email = email.downcase }</code>
         </li>
@@ -300,7 +300,7 @@
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">	</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -321,7 +321,25 @@
           <code class="ruby">	validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}, uniqueness: { case_sensitive: false }</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">	validates :password, length: { minimum: 6 }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_secure_password</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
