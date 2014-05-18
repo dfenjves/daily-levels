@@ -21,6 +21,18 @@ describe "UserPages" do
 			expect { click_button "Create my account" }.to change(User, :count).by(1)
     end
 
+    it "should show a sign out link, success, and user's name upon sign up" do
+      fill_in "Name",         with: "Example User 2"
+      fill_in "Email",        with: "user2@example.com"
+      fill_in "Password",     with: "foobar2"
+      fill_in "Confirmation", with: "foobar2"
+      click_button "Create my account"
+      expect(page).to have_link('Sign out')
+      expect(page).to  have_title(user.name)
+      expect(page).to  have_selector('div.alert.alert-success', text: 'Welcome')
+    end
+
+
 
   end
 

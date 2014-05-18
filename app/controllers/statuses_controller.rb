@@ -1,7 +1,9 @@
 class StatusesController < ApplicationController
 
 	def index
-		@statuses = Status.all
+		if signed_in?
+		@statuses = current_user.statuses.all
+		end
 		@status = Status.new
 	end
 
@@ -14,7 +16,7 @@ class StatusesController < ApplicationController
 	end
 
 	def create
-		@status = Status.new(status_params)
+		@status = current_user.statuses.new(status_params)
 		if @status.save
 			redirect_to root_path
 			flash[:success] = "Successfully created new daily status"
