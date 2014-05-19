@@ -1,7 +1,7 @@
 <div class="row">
 
 <!-- Panel containing form -->
-
+<% if signed_in? %>
 	<div class="col-md-6">
 		<div class="row">
 			<div class="panel panel-default">
@@ -28,7 +28,7 @@
 	</div>
 
 <!-- Panel containing table -->
-<% if signed_in? %>
+
 	<div class="col-md-6">
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -59,12 +59,15 @@
 			</div>
 		</div>
 	</div>
+	<% else %>
+	<div class="jumbotron">
+  	<h1>Daily Levels</h1>
+  <p>A simple tracker to learn more about how your food consumption affects your happiness </p>
+  <p><a href = <%= signup_path %> class="btn btn-primary btn-lg" role="button">Sign Up</a>
+  <a href = <%= signin_path %> class="btn btn-primary btn-lg" role="button">Sign In</a></p>
+</div>
 	<% end %>
 <!-- End Panel containing table -->
 
 </div>
 <!-- end row -->
-
-<div class="row">
-
-</div>

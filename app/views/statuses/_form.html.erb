@@ -43,7 +43,7 @@
 		</div>
 	</div>
 
-	<p>
+	<p> 
 		<%= f.label :rating, 'Today\'s Rating (1-10):' %>
 		<%= f.number_field :rating%>
 	</p>
@@ -53,5 +53,5 @@
 		<%= f.text_area :notes %>
 	</p>
 
-	<%= f.submit %>
+	<%= f.submit class: "btn btn-primary btn-lg"%>
 <% end %>
