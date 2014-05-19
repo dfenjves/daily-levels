@@ -15,6 +15,7 @@ class UsersController < ApplicationController
       flash[:success] = "Welcome to Daily Levels!"
       redirect_to root_path
   	else
+      flash[:error] = "There was an issue with your form."
   		render 'new'
   	end
   end
