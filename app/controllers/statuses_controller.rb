@@ -32,7 +32,7 @@ class StatusesController < ApplicationController
 	end
 
 	def status_params
-		params.require(:status).permit(:dairy, :wheat, :meat, :coffee_cups, :notes, :date, :rating)
+		params.require(:status).permit(:dairy, :wheat, :meat, :exercise, :coffee_cups, :notes, :date, :rating)
 	end
 
 end

@@ -37,16 +37,22 @@
 		</div>
 
 	<div class="row">
-		<div class="col-centered">
+		<div class="col-xs-6">
 			<%= image_tag "coffee_cups.png", :class => "food-form" %>
 			<%= f.number_field :coffee_cups, :value => 0, :class=>"form-coffee" %>
 		</div>
+		<div class="col-xs-6">
+			<%= image_tag "exercise.png", :class => "food-form" %>
+			<%= f.check_box :exercise %>
+		</div>
 	</div>
 
-	<p> 
-		<%= f.label :rating, 'Today\'s Rating (1-10):' %>
-		<%= f.number_field :rating%>
-	</p>
+	<div class="row">
+		<div class="col-centered">
+			<%= image_tag "rating.png", :class => "food-form" %>
+			<%= f.number_field :rating, :value => 0, :class=>"form-coffee" %>
+		</div>
+	</div>
 
 	<p>
 		<%= f.label :notes, "Additional Notes:" %>

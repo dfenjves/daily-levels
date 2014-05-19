@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140518180452) do
+ActiveRecord::Schema.define(version: 20140519140733) do
 
   create_table "statuses", force: true do |t|
     t.boolean  "dairy"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140518180452) do
     t.date     "date"
     t.integer  "rating"
     t.integer  "user_id"
+    t.boolean  "exercise"
   end
 
   create_table "users", force: true do |t|
